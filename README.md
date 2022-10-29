@@ -1,5 +1,7 @@
 # Goginx
 
+<img width="600" alt="스크린샷 2022-10-29 오후 4 10 45" src="https://user-images.githubusercontent.com/81317358/198818960-750ee8fc-6dec-4608-939b-2c9a39c2f121.png">
+
 ```
 .
 ├── README.md
