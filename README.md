@@ -14,6 +14,8 @@
 
 ## Description
 - Reverse Proxy 기능 (L7 Load Balancing)
+    - 현재 간단하 REST API 정도만 동작
+    - Socket 통신, Redirect 등 동작 X
 
 ## Installation
 1. 레포지토리 클론  
