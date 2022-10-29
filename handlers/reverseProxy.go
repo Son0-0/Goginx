@@ -6,8 +6,11 @@ import (
 	"log"
 	"net/http"
 	"net/url"
+	"runtime"
 	"time"
 )
+
+var OS = runtime.GOOS
 
 type PortNumHandler struct {
 	PortNum string
@@ -37,6 +40,17 @@ func (pn *PortNumHandler) Handler(rw http.ResponseWriter, req *http.Request) {
 	}
 
 	// return response to the client
+
+	switch OS {
+	case "windows":
+		OS = "Windows"
+	case "darwin":
+		OS = "macOS"
+	case "linux":
+		OS = "Linux"
+	}
+
+	rw.Header().Set("Server", fmt.Sprintf("Goginx (%s)", OS))
 	rw.WriteHeader(http.StatusOK)
 	io.Copy(rw, originServerResponse.Body)
 }
